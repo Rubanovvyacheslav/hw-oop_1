@@ -2,16 +2,31 @@
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        Gryffindor harryPotter = new Gryffindor("Harry Potter", 8, 11, 10, 11, 12);
+        Gryffindor hermioneGranger = new Gryffindor("Hermione Granger", 10, 12, 9, 11, 8);
+        Gryffindor ronWeasley = new Gryffindor("Ron Weasley", 6, 8, 8, 9, 13);
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+        Hufflepuff zachariasSmith = new Hufflepuff("Zacharias Smith", 7, 10, 10, 10, 10);
+        Hufflepuff cedricDiggory = new Hufflepuff("Cedric Diggory", 9, 11, 8, 12, 11);
+        Hufflepuff justinFinchFletchley = new Hufflepuff("Justin Finch Fletchley", 5, 8, 7, 6, 8);
+
+        Ravenclaw zhouChang = new Ravenclaw("Zhou Chang", 8, 6, 4, 5, 8, 9);
+        Ravenclaw padmaPatil = new Ravenclaw("Padma Patil", 8, 7, 4, 6, 7, 9);
+        Ravenclaw marcusBelby = new Ravenclaw("Marcus Belby", 9, 8, 7, 6, 8, 9);
+
+        Slytherin dracoMalfoy = new Slytherin("Draco Malfoy", 8, 11, 5, 6, 5, 5, 4);
+        Slytherin grahamMontagu = new Slytherin("Graham Montagu", 6, 6, 5, 6, 7, 5, 6);
+        Slytherin gregoryGoyle = new Slytherin("Gregory Goyle", 5, 5, 6, 4, 8, 9, 7);
+
+        Gryffindor.printGryffindor(harryPotter);
+        Hufflepuff.printHufflepuff(zachariasSmith);
+        Ravenclaw.printRavenclaw(zhouChang);
+        Slytherin.printSlytherin(dracoMalfoy);
+        Gryffindor.compareGryffindor(harryPotter, hermioneGranger);
+        Hufflepuff.compareHufflepuff(zachariasSmith, cedricDiggory);
+        Slytherin.compareSlytherin(dracoMalfoy, grahamMontagu);
+        harryPotter.compare(cedricDiggory);
     }
 }
+
