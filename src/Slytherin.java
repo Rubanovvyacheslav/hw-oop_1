@@ -14,6 +14,18 @@ public class Slytherin extends Hogwarts {
         this.lFPower = lFPower;
     }
 
+    @Override
+    int calculateSpecificScore() {
+        return this.cunning + this.resolve + this.ambition + this.resourcefulness + this.lFPower;
+    }
+
+    @Override
+    void printCompareOfStudents(Hogwarts obj1, Hogwarts obj2) {
+        System.out.printf("%s Лучший Слизеринец, чем %s%n", obj1.getName(), obj2.getName());
+
+
+    }
+
     public int getCunning() {
         return cunning;
     }
@@ -62,21 +74,6 @@ public class Slytherin extends Hogwarts {
                 ", ambition=" + ambition +
                 ", resourcefulness=" + resourcefulness +
                 ", lFPower=" + lFPower +
-                '}';
-    }
-
-    public static void printSlytherin(Slytherin obj) {
-        System.out.printf("Ученик - %s, Колдовство - %s, Трансгрессия - %s, Хитрость - %s, Решительность - %s, Амбициозность - %s, Находчивость - %s, Жажда власти - %s%n", obj.getName(), obj.getSpellPower(), obj.getApparitionDistance(), obj.getCunning(), obj.getResolve(), obj.getAmbition(), obj.getResourcefulness(), obj.getlFPower());
-    }
-
-    public static void compareSlytherin(Slytherin name1, Slytherin name2) {
-        int pointname1 = name1.getSpellPower() + name1.getApparitionDistance() + name1.getCunning() + name1.getResolve() + name1.getAmbition() + name1.getResourcefulness() + name1.getlFPower();
-        int pointname2 = name2.getSpellPower() + name2.getApparitionDistance() + name2.getCunning() + name2.getResolve() + name2.getAmbition() + name2.getResourcefulness() + name2.getlFPower();
-        if (pointname1 > pointname2) {
-            System.out.printf("У %s сумма баллов равна %s, у %s сумма баллов равна %s. %s лучший Слизеринец, чем %s%n", name1.getName(), pointname1, name2.getName(), pointname2, name1.getName(), name2.getName());
-        } else if (pointname2 > pointname1) {
-            System.out.printf("У %s сумма баллов равна %s, у %s сумма баллов равна %s. %s лучший Слизеринец, чем %s%n", name2.getName(), pointname2, name1.getName(), pointname1, name2.getName(), name1.getName());
-        } else
-            System.out.printf("У %s сумма баллов равна %s, у %s сумма баллов равна %s. Слизеринцы равны%n", name2.getName(), pointname2, name1.getName(), pointname1);
+                "} " + super.toString();
     }
 }

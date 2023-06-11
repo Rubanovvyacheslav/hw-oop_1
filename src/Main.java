@@ -19,14 +19,11 @@ public class Main {
         Slytherin grahamMontagu = new Slytherin("Graham Montagu", 6, 6, 5, 6, 7, 5, 6);
         Slytherin gregoryGoyle = new Slytherin("Gregory Goyle", 5, 5, 6, 4, 8, 9, 7);
 
-        Gryffindor.printGryffindor(harryPotter);
-        Hufflepuff.printHufflepuff(zachariasSmith);
-        Ravenclaw.printRavenclaw(zhouChang);
-        Slytherin.printSlytherin(dracoMalfoy);
-        Gryffindor.compareGryffindor(harryPotter, hermioneGranger);
-        Hufflepuff.compareHufflepuff(zachariasSmith, cedricDiggory);
-        Slytherin.compareSlytherin(dracoMalfoy, grahamMontagu);
-        harryPotter.compare(cedricDiggory);
+        harryPotter.compare(ronWeasley);
+        harryPotter.compare(marcusBelby);
+        cedricDiggory.compare(dracoMalfoy);
+        zachariasSmith.compare(justinFinchFletchley);
+
     }
 }
 

@@ -10,6 +10,18 @@ public class Gryffindor extends Hogwarts {
         this.bravery = bravery;
     }
 
+
+    @Override
+    int calculateSpecificScore() {
+        return this.nobility + this.honor + this.bravery;
+    }
+
+    @Override
+    void printCompareOfStudents(Hogwarts obj1, Hogwarts obj2) {
+        System.out.printf("%s лучший Гриффиндорец, чем %s%n", obj1.getName(), obj2.getName());
+    }
+
+
     public int getNobility() {
         return nobility;
     }
@@ -40,22 +52,6 @@ public class Gryffindor extends Hogwarts {
                 "nobility=" + nobility +
                 ", honor=" + honor +
                 ", bravery=" + bravery +
-                '}';
+                "} " + super.toString();
     }
-
-    public static void printGryffindor(Gryffindor obj) {
-        System.out.printf("Ученик - %s, Колдовство - %s, Трансгрессия - %s, Благородство - %s, Честь - %s, Храбрость - %s%n", obj.getName(), obj.getSpellPower(), obj.getApparitionDistance(), obj.getNobility(), obj.getHonor(), obj.getBravery());
-    }
-
-    public static void compareGryffindor(Gryffindor name1, Gryffindor name2) {
-        int pointname1 = name1.getSpellPower() + name1.getApparitionDistance() + name1.getNobility() + name1.getHonor() + name1.getBravery();
-        int pointname2 = name2.getSpellPower() + name2.getApparitionDistance() + name2.getNobility() + name2.getHonor() + name2.getBravery();
-        if (pointname1 > pointname2) {
-            System.out.printf("У %s сумма баллов равна %s, у %s сумма баллов равна %s. %s лучший Гриффиндорец, чем %s%n", name1.getName(), pointname1, name2.getName(), pointname2, name1.getName(), name2.getName());
-        } else if (pointname2 > pointname1) {
-            System.out.printf("У %s сумма баллов равна %s, у %s сумма баллов равна %s. %s лучший Гриффиндорец, чем %s%n", name2.getName(), pointname2, name1.getName(), pointname1, name2.getName(), name1.getName());
-        } else
-            System.out.printf("У %s сумма баллов равна %s, у %s сумма баллов равна %s. Гриффиндорцы равны%n", name2.getName(), pointname2, name1.getName(), pointname1);
-    }
-
 }
